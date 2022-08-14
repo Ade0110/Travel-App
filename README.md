@@ -10,4 +10,3 @@ How to run the project:
 The project can be ran in 2 modes, development and production. 
 To run in development mode: run npm run build-dev in the terminal.
 To run in production mode: run npm run build-prod.
-# Travel-App

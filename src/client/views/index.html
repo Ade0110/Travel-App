@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel app</title>
+
+    <body>
+
+        <header>
+       
+            <h1>Travel App</h1>
+        </header>
+
+        <main>
+            <section id="forms">
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="city" type="text" name="input" value="" placeholder="Postal code">
+                    <label for="dateFromLabel">From</label>
+                    <input type="date" id="dateFrom" placeholder="From"></input>
+                    <label for="dateToLabel">To</label>
+                    <input type="date" id="dateTo" placeholder="To"></input>
+                    <input type="submit" id ="submit" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            </section>
+
+            <section id="results">
+                <strong>Trip details:</strong>
+                <div id="trip"></div>
+                <strong>Weather details:</strong>
+                <div id="weather"></div>
+                <div id="picture"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Banke for Udacity</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
+    </body>
+</html>
